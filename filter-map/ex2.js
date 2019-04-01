@@ -23,8 +23,10 @@ Sortie attendue:
 ['Bordeaux', 'Lille', 'Marseille', 'Reims', 'Toulouse']
 
 */
-
 function getCampusesTeachingReact(campuses) {
+  let array = [...campuses]
+  array = campuses.filter(x => x.curriculums.includes('JS/React')).map(x => x.city);
+  return array;
 }
 
 module.exports = getCampusesTeachingReact;
